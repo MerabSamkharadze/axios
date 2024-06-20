@@ -10,7 +10,9 @@ async function getData() {
     );
     filterFnc(response);
   } catch (err) {
-    console.log(err);
+    const h1 = document.createElement("h1");
+    h1.textContent = ` Server error : ${err}`;
+    document.body.appendChild(h1);
   }
 }
 
