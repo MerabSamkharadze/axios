@@ -1,13 +1,7 @@
 "use strict";
 
-// https://jsonplaceholder.typicode.com/users
-
-// async function getData() {
-//   let response = await axios.get("https://jsonplaceholder.typicode.com/users");
-//   console.log(response.data);
-// }
-
-// getData();
+const input = document.getElementById("input");
+const ul = document.getElementById("ul");
 
 async function getData() {
   try {
@@ -16,7 +10,10 @@ async function getData() {
     );
     console.log(response.data);
     response.data.forEach((element) => {
-      console.log(element.name);
+      const li = document.createElement("li");
+      li.textContent = `${element.name} ${element.surname}`;
+
+      ul.appendChild(li);
     });
   } catch (err) {
     console.log(err);
