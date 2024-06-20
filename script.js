@@ -1,7 +1,10 @@
 "use strict";
 
 // https://jsonplaceholder.typicode.com/users
-// let axios = axios.get("https://jsonplaceholder.typicode.com/users");
-axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
+
+async function getData() {
+  let response = await axios.get("https://jsonplaceholder.typicode.com/users");
   console.log(response.data);
-});
+}
+
+getData();
