@@ -8,6 +8,7 @@ async function getData() {
     const response = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
+
     filterFnc(response);
   } catch (err) {
     const h1 = document.createElement("h1");
