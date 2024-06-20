@@ -1,0 +1,6 @@
+.li {
+  display: none;
+}
+.li.active {
+  display: block;
+}
